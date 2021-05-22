@@ -1,0 +1,61 @@
+.stat-modifier-input {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+@media (min-width: 992px) {
+    .stat-name-input {
+        width: 18em !important;
+    }
+
+    .stat-modifier-input {
+        width: 3em !important;
+    }
+}
+
+
+.stat-name-input {
+}
+
+.stat-name-input>div {
+    box-shadow: none;
+}
+
+.stat-comment-input {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.stat-remove {
+    width: calc(100% - 1rem);
+    height: 38px;
+}
+
+.stat-remove:active {
+    transform: translateY(2px);
+  }
+
+.item-stat-editor {
+    /* margin-top: 20px; */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

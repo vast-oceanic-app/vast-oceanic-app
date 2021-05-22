@@ -1,0 +1,15 @@
+.item-creator {
+    height: 100%
+}
+
+@media screen and (max-width: 740px) {
+    .item-showcase-wrapper {
+        display: none
+    }
+}
+
+.show-case-content {
+    background: #000000EE !important;
+    max-width: 90% !important;
+    width: -webkit-fill-available !important;
+}

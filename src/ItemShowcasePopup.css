@@ -1,0 +1,12 @@
+.show-case-popup {
+    width: 100%;
+    background: #000000;
+    padding: 10px;
+}
+
+.show-case-popup .item-showcase {
+    position: initial !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+}

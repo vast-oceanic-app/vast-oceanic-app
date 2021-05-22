@@ -1,0 +1,74 @@
+.item-showcase {
+    background-color: #1c1c1c;
+    font-family: Spectral SemiBold; /*TODO: pack with the app, custom font*/
+    padding: 12px;
+    padding-left: 0px;
+    padding-right: 20px;
+    margin-left: 0px;
+    width: max-content;
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.item-image-container {
+    height: 72px;
+    width: 72px;
+}
+
+.item-image-container>.item-image-border {
+    height: 64px;
+    width: 64px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    border: #eaecdb 2px solid;
+}
+
+.item-image-container>.item-image {
+    max-height: 72px;
+    max-width: 72px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.item-name {
+    color: #eaecdb;
+    text-align: left;
+}
+
+.textbreak {
+    display: block;
+}
+
+.item-stat {
+    text-align: left;
+    font-size: 14px;
+}
+
+.stat-modifier {
+    color: #9a998f;
+}
+
+.stat-name {
+
+}
+
+.stat-comment {
+    color: #9a998f;
+}
+
+input:focus {
+    outline: none;
+}

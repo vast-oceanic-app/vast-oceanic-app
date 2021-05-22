@@ -1,0 +1,27 @@
+
+
+.item-image-container {
+    position: relative;
+}
+
+.menu-item-image-container {
+    height: 72px;
+    width: 72px;
+}
+
+.menu-item-image-container>.item-image {
+    max-height: 72px;
+    max-width: 72px;
+}
+
+.menu {
+    width: 100%;
+    max-height: 300px;
+    overflow-y: scroll;
+    display: flex;
+    background: #000000;
+  }
+
+  .icon-selector-content {
+      width: calc(100% - 50px) !important;
+  }
