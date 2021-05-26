@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/vast-oceanic-app/static/css/main.3a510bbf.chunk.css",
-    "main.js": "/vast-oceanic-app/static/js/main.9a47c401.chunk.js",
-    "main.js.map": "/vast-oceanic-app/static/js/main.9a47c401.chunk.js.map",
-    "runtime-main.js": "/vast-oceanic-app/static/js/runtime-main.44b48509.js",
-    "runtime-main.js.map": "/vast-oceanic-app/static/js/runtime-main.44b48509.js.map",
+    "main.css": "/vast-oceanic-app/static/css/main.732564e7.chunk.css",
+    "main.js": "/vast-oceanic-app/static/js/main.683fcae3.chunk.js",
+    "main.js.map": "/vast-oceanic-app/static/js/main.683fcae3.chunk.js.map",
+    "runtime-main.js": "/vast-oceanic-app/static/js/runtime-main.df2469e9.js",
+    "runtime-main.js.map": "/vast-oceanic-app/static/js/runtime-main.df2469e9.js.map",
     "static/css/2.c3cdabe4.chunk.css": "/vast-oceanic-app/static/css/2.c3cdabe4.chunk.css",
-    "static/js/2.84de14e5.chunk.js": "/vast-oceanic-app/static/js/2.84de14e5.chunk.js",
-    "static/js/2.84de14e5.chunk.js.map": "/vast-oceanic-app/static/js/2.84de14e5.chunk.js.map",
-    "static/js/3.040f8c7b.chunk.js": "/vast-oceanic-app/static/js/3.040f8c7b.chunk.js",
-    "static/js/3.040f8c7b.chunk.js.map": "/vast-oceanic-app/static/js/3.040f8c7b.chunk.js.map",
+    "static/js/2.36fddc28.chunk.js": "/vast-oceanic-app/static/js/2.36fddc28.chunk.js",
+    "static/js/2.36fddc28.chunk.js.map": "/vast-oceanic-app/static/js/2.36fddc28.chunk.js.map",
+    "static/js/3.b76ba663.chunk.js": "/vast-oceanic-app/static/js/3.b76ba663.chunk.js",
+    "static/js/3.b76ba663.chunk.js.map": "/vast-oceanic-app/static/js/3.b76ba663.chunk.js.map",
     "index.html": "/vast-oceanic-app/index.html",
     "static/css/2.c3cdabe4.chunk.css.map": "/vast-oceanic-app/static/css/2.c3cdabe4.chunk.css.map",
-    "static/css/main.3a510bbf.chunk.css.map": "/vast-oceanic-app/static/css/main.3a510bbf.chunk.css.map",
-    "static/js/2.84de14e5.chunk.js.LICENSE.txt": "/vast-oceanic-app/static/js/2.84de14e5.chunk.js.LICENSE.txt",
+    "static/css/main.732564e7.chunk.css.map": "/vast-oceanic-app/static/css/main.732564e7.chunk.css.map",
+    "static/js/2.36fddc28.chunk.js.LICENSE.txt": "/vast-oceanic-app/static/js/2.36fddc28.chunk.js.LICENSE.txt",
     "static/media/ItemFieldsEditor.css": "/vast-oceanic-app/static/media/IntroHeadR-Base.6e8c73ca.otf",
     "static/media/App.css": "/vast-oceanic-app/static/media/Spectral-SemiBold.4ba58c8f.ttf"
   },
   "entrypoints": [
-    "static/js/runtime-main.44b48509.js",
+    "static/js/runtime-main.df2469e9.js",
     "static/css/2.c3cdabe4.chunk.css",
-    "static/js/2.84de14e5.chunk.js",
-    "static/css/main.3a510bbf.chunk.css",
-    "static/js/main.9a47c401.chunk.js"
+    "static/js/2.36fddc28.chunk.js",
+    "static/css/main.732564e7.chunk.css",
+    "static/js/main.683fcae3.chunk.js"
   ]
 }
