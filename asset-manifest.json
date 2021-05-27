@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/vast-oceanic-app/static/css/main.95c87c15.chunk.css",
-    "main.js": "/vast-oceanic-app/static/js/main.8b8d4851.chunk.js",
-    "main.js.map": "/vast-oceanic-app/static/js/main.8b8d4851.chunk.js.map",
+    "main.js": "/vast-oceanic-app/static/js/main.daff0e37.chunk.js",
+    "main.js.map": "/vast-oceanic-app/static/js/main.daff0e37.chunk.js.map",
     "runtime-main.js": "/vast-oceanic-app/static/js/runtime-main.54a1d661.js",
     "runtime-main.js.map": "/vast-oceanic-app/static/js/runtime-main.54a1d661.js.map",
     "static/css/2.c3cdabe4.chunk.css": "/vast-oceanic-app/static/css/2.c3cdabe4.chunk.css",
@@ -21,6 +21,6 @@
     "static/css/2.c3cdabe4.chunk.css",
     "static/js/2.6f9d846b.chunk.js",
     "static/css/main.95c87c15.chunk.css",
-    "static/js/main.8b8d4851.chunk.js"
+    "static/js/main.daff0e37.chunk.js"
   ]
 }
