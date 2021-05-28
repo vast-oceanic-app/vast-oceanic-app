@@ -12,6 +12,7 @@ import { IconSelector } from "./IconSelector";
 import { StylesConfig } from "react-select";
 import { StatModifierEditor } from "./StatModifierEditor";
 import { v4 as uuidv4 } from 'uuid';
+import { SharePanel } from "./SharePanel";
 
 export class ItemFieldsEditor extends React.Component<{ initialItem: Item, itemChange: (item: Item) => void }, { item: Item, popupRef: RefObject<PopupActions> }> {
     constructor(props: { initialItem: Item, itemChange: (item: Item) => void }) {
@@ -23,6 +24,7 @@ export class ItemFieldsEditor extends React.Component<{ initialItem: Item, itemC
         this.handleNameChange = this.handleNameChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.iconChange = this.iconChange.bind(this);
+        this.displayTypeChange = this.displayTypeChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.renderStatsEditor = this.renderStatsEditor.bind(this);
     }
@@ -40,16 +42,24 @@ export class ItemFieldsEditor extends React.Component<{ initialItem: Item, itemC
         return (
             <div className="item-fields-editor">
                 <form onSubmit={this.handleSubmit}>
-                    <label className="field-label ml-3"> Name: </label>
+                    <label className="field-label ml-3 mt-3"> Name: </label>
                     <input className="item-name-input ml-3 mr-3" type="text" value={this.state.item.name} onChange={this.handleNameChange} />
-                    <label className="field-label ml-3"> Icon(click to select or type your own) </label>
+                    <label className="field-label ml-3 mt-3"> Icon(click to select or type your own) </label>
                     <div className="ml-3">
                         <IconSelector url={this.state.item.image} urlChange={this.iconChange}></IconSelector>
                     </div>
-                    <button className="add-button ml-3" onClick={(e) => this.handleClick()}>ADD ITEM STAT</button>
+                    <button className="add-button ml-3 mt-3" onClick={(e) => this.handleClick()}>ADD ITEM STAT</button>
                     {this.renderStatsEditor()}
-                    <button className="continue-button ml-3" onClick={(e) => this.props.itemChange(this.state.item)}>TRY IT!</button>
+                    <label className="field-label ml-3 mt-3"> Display style: </label>
+                    <div className="display-type-container ml-3">
+                        <button className={"display-type-button conceptual " + (this.state.item.displayType=='conceptual' ? 'selected' : '')} onClick={(e) => this.displayTypeChange('conceptual')}>Conceptual</button>
+                        <button className={"display-type-button classic " + (this.state.item.displayType=='classic' ? 'selected' : '')} onClick={(e) => this.displayTypeChange('classic')}>Classic</button>
+                    </div>
+                    <button className="continue-button ml-3 mt-3" onClick={(e) => this.props.itemChange(this.state.item)}>TRY IT!</button>
                 </form>
+                <div className="ml-3 mb-3">
+                    <SharePanel item={this.state.item}></SharePanel>
+                </div>
             </div>
         );
     }
@@ -59,14 +69,19 @@ export class ItemFieldsEditor extends React.Component<{ initialItem: Item, itemC
         this.setState({ item: this.state.item });
     }
 
+    displayTypeChange(displayType: 'conceptual' | 'classic') {
+        this.state.item.displayType = displayType;
+        this.setState({ item: this.state.item });
+    }
+
     handleClick() {
-        const stat = new StatModifier(1, new Stat('Inland Empire', StatColors.PSY), 'Bratan!')
+        const stat = new StatModifier(0, null, '')
         this.state.item.stats.push(stat);
         this.setState({ item: this.state.item });
     }
 
     renderStatsEditor() {
-        return (<div>
+        return (<div className="container-fluid">
             {/* <div className="item-stat-editor row">
                 <label className="stat-modifier-header">Modifier</label>
                 <label className="stat-name-header">Stat</label>

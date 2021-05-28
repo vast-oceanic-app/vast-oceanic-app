@@ -13,6 +13,10 @@
         width: 18em !important;
     }
 
+    .stat-comment-input {
+        width: 18em !important;
+    }
+
     .stat-modifier-input {
         width: 3em !important;
     }
@@ -35,9 +39,13 @@
     border-style: solid;
     border-width: 1px;
 }
+.stat-remove-container {
+    text-align: right;
+}
 
 .stat-remove {
     width: calc(100% - 1rem);
+    min-width: 3em;
     height: 38px;
 }
 
@@ -46,7 +54,6 @@
   }
 
 .item-stat-editor {
-    /* margin-top: 20px; */
 }
 
 input::-webkit-outer-spin-button,

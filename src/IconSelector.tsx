@@ -14,28 +14,32 @@ export class IconSelector extends React.Component<{ url: string, urlChange: (ite
         this.renderOptions = this.renderOptions.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.renderImage = this.renderImage.bind(this);
+        this.handleUrlChange = this.handleUrlChange.bind(this);
     }
 
     closeTooltip: () => void | undefined;
 
     render() {
         return (
-            <Popup
-                        ref={this.state.popupRef}
-                        trigger={this.renderImage()}
-                        position="bottom left"
-                        on="click"
-                        closeOnDocumentClick
-                        mouseLeaveDelay={300}
-                        mouseEnterDelay={0}
-                        contentStyle={{ padding: '0px', border: 'none' }}
-                        arrow={false}
-                        className="icon-selector"
-                    >
-                        <div className="menu row mx-0">
-                            {this.renderOptions()}
-                        </div>
-                    </Popup>
+            <div className="icon-selector-wrapper">
+                <Popup
+                    ref={this.state.popupRef}
+                    trigger={this.renderImage()}
+                    position="bottom left"
+                    on="click"
+                    closeOnDocumentClick
+                    mouseLeaveDelay={300}
+                    mouseEnterDelay={0}
+                    contentStyle={{ padding: '0px', border: 'none' }}
+                    arrow={false}
+                    className="icon-selector"
+                >
+                    <div className="menu row mx-0">
+                        {this.renderOptions()}
+                    </div>
+                </Popup>
+                <input className="image-url-input ml-3" type="text" value={this.props.url} onChange={this.handleUrlChange} />
+            </div>
         );
     }
     renderOptions() {
@@ -122,7 +126,7 @@ export class IconSelector extends React.Component<{ url: string, urlChange: (ite
 
         return options.map((s, index) => (
             <div key={index} className="menu-item-image-container col-auto">
-                <img className="item-image" src={s.label} onClick={(e) => this.handleClick(s.label)}></img>
+                <img className="item-image" src={process.env.PUBLIC_URL + s.label} onClick={(e) => this.handleClick(process.env.PUBLIC_URL + s.label)}></img>
             </div>));
     }
 
@@ -136,5 +140,9 @@ export class IconSelector extends React.Component<{ url: string, urlChange: (ite
                 <div className="item-image-border"></div>
                 <img className="item-image" src={this.props.url}></img>
             </div>;
+    }
+
+    handleUrlChange(event: any) {
+        this.props.urlChange(event.target.value);
     }
 }

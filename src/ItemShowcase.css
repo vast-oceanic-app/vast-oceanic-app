@@ -1,7 +1,7 @@
 .item-showcase {
-    background-color: #1c1c1c;
+    background-color: black; /*#1c1c1c;*/
     font-family: Spectral SemiBold; /*TODO: pack with the app, custom font*/
-    padding: 12px;
+    padding: 8px;
     padding-left: 0px;
     padding-right: 20px;
     margin-left: 0px;
@@ -13,9 +13,14 @@
     transform: translateY(-50%) translateX(-50%);
 }
 
+.col-image {
+    padding-left: 8px !important;
+    padding-right: 12px !important;
+}
+
 .item-image-container {
-    height: 72px;
-    width: 72px;
+    height: 80px;
+    width: 80px;
 }
 
 .item-image-container>.item-image-border {
@@ -28,12 +33,12 @@
     -moz-transform: translateY(-50%) translateX(-50%);
     -ms-transform: translateY(-50%) translateX(-50%);
     transform: translateY(-50%) translateX(-50%);
-    border: #eaecdb 2px solid;
+    border: #eaecdb 2px solid; 
 }
 
 .item-image-container>.item-image {
-    max-height: 72px;
-    max-width: 72px;
+    max-height: 80px;
+    max-width: 80px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -46,15 +51,22 @@
 .item-name {
     color: #eaecdb;
     text-align: left;
+    margin-top: -3px;
+    margin-bottom: 3px;
+    font-size: 17px;
 }
 
 .textbreak {
     display: block;
+    min-width: 100%;
+    max-width: min-content;
+    margin-bottom: 4px;
 }
 
 .item-stat {
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
+    line-height: 1.4;
 }
 
 .stat-modifier {
@@ -71,4 +83,8 @@
 
 input:focus {
     outline: none;
+}
+
+.item-info-container, .item-stat-container, .item-stat, .item-name {
+    max-width: max-content;
 }

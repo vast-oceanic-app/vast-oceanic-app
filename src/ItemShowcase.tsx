@@ -1,5 +1,5 @@
 import React from 'react';
-import { Item } from './item';
+import { Item, Stat, StatColors } from './item';
 import './ItemShowcase.css'
 
 export class ItemShowcase extends React.Component<{item: Item}> {
@@ -11,16 +11,16 @@ export class ItemShowcase extends React.Component<{item: Item}> {
 
     render() {
         return (
-        <div className="item-showcase row flex-nowrap">
-            <div className="col-auto">
+        <div id="item-showcase" className="item-showcase row flex-nowrap">
+            <div className="col-auto col-image">
                 {/* <div className="item-image" style={ { backgroundImage: 'url(' + this.props.item.image + ')' }}></div> */}
                 { this.renderImage() }
             </div>
-            <div>
+            <div className="item-info-container">
                 <div className="item-name">
                     { this.props.item.name }
                 </div>
-                <svg className="textbreak" width="100%" viewBox="0 0 100 1" xmlns="http://www.w3.org/2000/svg">                    
+                <svg className="textbreak" width="100" viewBox="0 0 100 1" xmlns="http://www.w3.org/2000/svg">                    
                     <defs>
                       <filter id="f1" x="0" y="0">
                         {/* <feGaussianBlur in="SourceGraphic" stdDeviation="1" /> */}
@@ -39,7 +39,7 @@ export class ItemShowcase extends React.Component<{item: Item}> {
                     <rect x="0" y="0" width="100" height="0.25" fill="#FFFFFF" filter="url(#f1)"/>
                     {/* <line x1="0" y1="0" x2="100" y2="0" stroke="#FFFFFF" strokeWidth="5" filter="url(#f1)"/> */}
                 </svg>
-                <div>
+                <div className="item-stat-container">
                     { this.renderStats() }
                 </div>
             </div>
@@ -51,9 +51,9 @@ export class ItemShowcase extends React.Component<{item: Item}> {
         if (!this.props.item.stats) return null;
         return this.props.item.stats.map((s, index) => (
             <div key={index} className="item-stat">
-                <span className="stat-modifier">{((s.modifier > 0) && '+')}{ s.modifier.toString() }</span>
-                <span className="stat-name" style={ { color: s.stat.color }} >{ ' ' + s.stat.name }</span>
-                <span className="stat-comment">{(!!s.comment && ': ')}{ s.comment }</span>
+                <span className="stat-modifier">{((s.modifier >= 0) && '+')}{ s.modifier.toString() }</span>
+                <span className="stat-name" style={ { color: s.stat?.color ?? StatColors.Misc }} >{ ' ' + (s.stat?.name ?? '') }</span>
+                {(this.props.item.displayType == 'conceptual' && <span className="stat-comment">{(!!s.comment && ': ')}{ s.comment }</span>)}
             </div>));
     }
 

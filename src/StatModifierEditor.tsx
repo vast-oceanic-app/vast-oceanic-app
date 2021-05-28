@@ -2,6 +2,8 @@ import React from "react";
 import { Stat, StatColors, StatModifier } from "./item";
 import CreatableSelect from 'react-select/creatable';
 import './StatModifierEditor.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBackspace } from "@fortawesome/free-solid-svg-icons";
 
 export class StatModifierEditor extends React.Component<{ stat: StatModifier, statChange: (stat: StatModifier) => void, statRemove: () => void }, { stat: StatModifier }> {
     constructor(props: { stat: StatModifier, statChange: (stat: StatModifier) => void, statRemove: () => void }) {
@@ -77,12 +79,12 @@ export class StatModifierEditor extends React.Component<{ stat: StatModifier, st
                 };
             }
         };
-        return (<div className="item-stat-editor row">
+        return (<div className="item-stat-editor row no-gutters">
             <div className="col-2 col-lg-auto mt-3">
-                <input className="stat-modifier-input ml-3" type="number" placeholder="Modifier" value={this.state.stat.modifier} onChange={this.handleModifierChange} />
+                <input className="mr-3 mr-lg-0 stat-modifier-input" type="number" placeholder="Modifier" value={this.state.stat.modifier} onChange={this.handleModifierChange} />
             </div>
             <div className="col-10 col-lg-auto mt-3">
-                <CreatableSelect className="stat-name-input mr-3 mr-lg-0"
+                <CreatableSelect className="ml-3 mr-0 mr-lg-3 stat-name-input"
                     isClearable
                     placeholder="Select stat or type in your own..."
                     defaultValue={this.state.stat.stat}
@@ -112,11 +114,11 @@ export class StatModifierEditor extends React.Component<{ stat: StatModifier, st
                 />
 
             </div>
-            <div className="col-10 col-lg-auto mt-3">
-                <input className="stat-comment-input ml-3 ml-lg-0" type="text" placeholder="Comment" value={this.state.stat.comment} onChange={this.handleCommentChange} />
+            <div className="col-9 col-md-10 col-lg-auto mt-3">
+                <input className="mr-lg-3 stat-comment-input" type="text" placeholder="Comment" value={this.state.stat.comment} onChange={this.handleCommentChange} />
             </div>
-            <div className="col-2 col-lg-auto mt-3">
-                <button className="stat-remove  mr-3" onClick={this.props.statRemove}>X</button>
+            <div className="col-3 col-md-2 col-lg-auto mt-3 stat-remove-container">
+                <button className="stat-remove" onClick={this.props.statRemove}><FontAwesomeIcon icon={faBackspace}/></button>
             </div>
         </div>);
     }

@@ -55,6 +55,20 @@
     url("Spectral\\Spectral-SemiBold.ttf") format("truetype")
 }
 
+@font-face {
+  font-family: 'August Sans Reduced Light';
+  src: url('AugustSansReduced-Light\\AugustSans-45Light.ttf');
+  src: local('August Sans Reduced Light'), local('August Sans Reduced Light'),
+    url("AugustSansReduced-Light\\AugustSans-45Light.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: 'Intro Head R Base';
+  src: url('IntroHeadR-Base.otf');
+  src: local('Intro Head R Base'), local('Intro Head R Base'),
+    url("IntroHeadR-Base.otf") format("opentype")
+}
+
 .action-button {
   font-family: Intro Head R Base; /*TODO: pack with the app, custom font*/
   background-color: #912710;
@@ -66,3 +80,23 @@
   text-align: left;    
   font-size: xx-large;
 }
+
+.nav-link {  
+  font-size: x-large;
+  color: white;
+  font-family: August Sans Reduced Light;
+  background-color: #000c19;
+  max-width: fit-content;
+  display: block;
+}
+
+.nav-link:hover {
+  color: white;
+  background-color: #c15d23;
+}
+
+.nav-link-container {
+  text-align: -webkit-center;
+  text-align: -moz-center;
+}
+

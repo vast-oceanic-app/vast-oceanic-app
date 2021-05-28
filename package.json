@@ -2,8 +2,13 @@
   "name": "my-vast-oceanic-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://vast-oceanic-app.github.io/vast-oceanic-app",
+  "homepage": "http://vast-oceanic-app.github.io/vast-oceanic-app/",
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-brands-svg-icons": "^5.15.3",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
     "@reach/router": "^1.3.4",
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
@@ -15,10 +20,14 @@
     "@types/react-select": "^4.0.15",
     "@types/uuid": "^8.3.0",
     "bootstrap": "^4.6.0",
+    "dom-to-image": "^2.6.0",
     "gh-pages": "^3.1.0",
     "react": "^17.0.2",
     "react-copy-to-clipboard": "^5.0.3",
     "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-meta-tags": "^1.0.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-select": "^4.3.0",
     "react-select-tile": "^1.0.10",
@@ -29,8 +38,8 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "set PUBLIC_URL=.&&react-scripts start",
+    "build": "set PUBLIC_URL=/vast-oceanic-app&&react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
@@ -55,7 +64,11 @@
     ]
   },
   "devDependencies": {
+    "@types/dom-to-image": "^2.6.2",
     "@types/reach__router": "^1.3.7",
-    "@types/react-copy-to-clipboard": "^5.0.0"
+    "@types/react-copy-to-clipboard": "^5.0.0",
+    "@types/react-helmet": "^6.1.1",
+    "@types/react-router": "^5.1.14",
+    "@types/react-router-dom": "^5.1.7"
   }
 }

@@ -1,12 +1,13 @@
 export class Item {
     constructor(public name: string,
         public image: string,
-        public stats: StatModifier[]) { }    
+        public stats: StatModifier[],
+        public displayType:  'conceptual' | 'classic') { }    
 }
 
 export class StatModifier {
     constructor(public modifier: number,
-        public stat: Stat,
+        public stat: Stat | null,
         public comment: string) { }
 }
 

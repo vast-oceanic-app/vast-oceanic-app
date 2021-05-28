@@ -2,16 +2,17 @@
 
 .item-image-container {
     position: relative;
+    display: inline-block;
 }
 
 .menu-item-image-container {
-    height: 72px;
-    width: 72px;
+    height: 80px;
+    width: 80px;
 }
 
 .menu-item-image-container>.item-image {
-    max-height: 72px;
-    max-width: 72px;
+    max-height: 80px;
+    max-width: 80px;
 }
 
 .menu {
@@ -23,5 +24,29 @@
   }
 
   .icon-selector-content {
-      width: calc(100% - 50px) !important;
+        width: calc(50% - 50px) !important;
   }
+
+  @media screen and (max-width: 992px) {
+    .icon-selector-content {
+        width: calc(100% - 50px) !important;
+    }
+}
+
+.image-url-input {
+    display: inline-block;
+    height: 38px;
+    background-color: black;
+    color: white;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+    vertical-align: bottom;
+    top: -8px;
+    width: calc(100% - 96px - 1rem);
+}
+
+.icon-selector-wrapper {
+    text-align: left;
+}
