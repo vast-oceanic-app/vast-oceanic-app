@@ -17,7 +17,7 @@ function App() {
   ],
   'conceptual');
   const jsonParam = encodeURIComponent(JSON.stringify(item));
-  // console.log(jsonParam);
+  // console.log(jsonParam);dsf
   return (
     <div id="app-top" className="App container-fluid" style={{ backgroundImage: 'url(' + process.env.PUBLIC_URL + '/background.png)' }}>
     <HashRouter basename={process.env.PUBLIC_URL}>
